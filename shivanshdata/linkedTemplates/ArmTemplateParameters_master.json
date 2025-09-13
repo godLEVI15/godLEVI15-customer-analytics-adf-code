@@ -8,6 +8,9 @@
 		"adlsv2_accountKey": {
 			"value": ""
 		},
+		"databricks_accessToken": {
+			"value": ""
+		},
 		"mysql_connectionString": {
 			"value": ""
 		},

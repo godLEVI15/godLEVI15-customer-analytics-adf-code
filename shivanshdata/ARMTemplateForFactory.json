@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'adlsv2'"
 		},
+		"databricks_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'databricks'"
+		},
 		"mysql_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'mysql'"
@@ -789,6 +793,24 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/databricks')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricksDeltaLake",
+				"typeProperties": {
+					"domain": "https://adb-1771726649303289.9.azuredatabricks.net",
+					"clusterId": "0913-191850-6a0m8he3",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('databricks_accessToken')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/mysql')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -908,7 +930,7 @@
 						"     partitionBy('hash', 1)) ~> sink1",
 						"derivedColumn2 sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
-						"     partitionFileNames:['Transactions'],",
+						"     partitionFileNames:['Transactions.csv'],",
 						"     umask: 0022,",
 						"     preCommands: [],",
 						"     postCommands: [],",
