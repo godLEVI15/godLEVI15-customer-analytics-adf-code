@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "shivanshdata"
+		},
+		"adlsv2_accountKey": {
+			"value": ""
+		},
+		"mysql_connectionString": {
+			"value": ""
+		},
+		"adlsv2_properties_typeProperties_url": {
+			"value": "https://shivanshacc.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
