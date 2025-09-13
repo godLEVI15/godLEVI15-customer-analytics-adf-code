@@ -43,7 +43,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "lsilver",
+						"referenceName": "losil",
 						"type": "DatasetReference"
 					},
 					"name": "sink3"
