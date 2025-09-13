@@ -33,68 +33,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "TransactionID",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "TransactionID",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "CustomerID",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "CustomerID",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ProductID",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "ProductID",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Amount",
-									"type": "Decimal",
-									"physicalType": "decimal"
-								},
-								"sink": {
-									"name": "Amount",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "TransactionDate",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "TransactionDate",
-									"type": "String",
-									"physicalType": "String"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -104,13 +42,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureMySqlTable1",
+						"referenceName": "AzureMySqlTable2",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "transactions",
+						"referenceName": "t3",
 						"type": "DatasetReference"
 					}
 				]
