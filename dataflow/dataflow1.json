@@ -112,7 +112,7 @@
 				"     partitionBy('hash', 1)) ~> sink2",
 				"source3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     partitionFileNames:['LOGS'],",
+				"     partitionFileNames:['LOGS.csv'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
