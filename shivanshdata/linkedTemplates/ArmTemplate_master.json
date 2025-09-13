@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "shivanshdata"
 		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
 		"adlsv2_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'adlsv2'"
@@ -19,17 +23,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'mysql'"
 		},
-		"AzureDatabricks1_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0913-191850-6a0m8he3"
 		},
 		"adlsv2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://shivanshacc.dfs.core.windows.net/"
-		},
-		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
-			"type": "string",
-			"defaultValue": "0913-191850-6a0m8he3"
 		},
 		"containerUri": {
 			"type": "string",
@@ -58,6 +58,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
 					"adlsv2_accountKey": {
 						"value": "[parameters('adlsv2_accountKey')]"
 					},
@@ -67,14 +70,11 @@
 					"mysql_connectionString": {
 						"value": "[parameters('mysql_connectionString')]"
 					},
-					"AzureDatabricks1_accessToken": {
-						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
 					},
 					"adlsv2_properties_typeProperties_url": {
 						"value": "[parameters('adlsv2_properties_typeProperties_url')]"
-					},
-					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
-						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
